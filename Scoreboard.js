@@ -17,5 +17,10 @@ export class Scoreboard{
         this.scoreText.setText('PUNTOS: ' + this.score)
     }
 
+    decrementPoints(points){
+        this.score -= points;
+        this.scoreText.setText('PUNTOS: ' + this.score)
+    }
+
 
 }
