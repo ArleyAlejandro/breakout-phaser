@@ -36,14 +36,14 @@ export class Game extends Phaser.Scene {
     // Lista de posiciones específicas para los bloques
     const positions = [
       { x: 50, y: 150 },
-      { x: 120, y: 50 },
-      { x: 190, y: 50 },
-      { x: 260, y: 150 },
+      { x: 120, y: 150 },
+      { x: 190, y: 250 },
+      { x: 260, y: 250 },
       { x: 330, y: 50 },
       { x: 400, y: 50 },
       { x: 470, y: 150 },
       { x: 540, y: 250 },
-      { x: 610, y: 50 },
+      { x: 610, y: 150 },
       { x: 680, y: 50 },
       { x: 750, y: 50 },
       { x: 50, y: 100 },
@@ -129,14 +129,14 @@ export class Game extends Phaser.Scene {
 
   update() {
     if (this.cursors.left.isDown && this.platform.x > this.platform.width / 2) {
-      this.platform.setVelocityX(-500);
+      this.platform.setVelocityX(-600);
       if (this.ball.getData('glue')) {
-        this.ball.setVelocityX(-500);
+        this.ball.setVelocityX(-600);
       }
     } else if (this.cursors.right.isDown && this.platform.x < this.physics.world.bounds.width - this.platform.width / 2) {
-      this.platform.setVelocityX(500);
+      this.platform.setVelocityX(600);
       if (this.ball.getData('glue')) {
-        this.ball.setVelocityX(500);
+        this.ball.setVelocityX(600);
       }
     } else {
       this.platform.setVelocityX(0);
